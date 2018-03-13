@@ -1,5 +1,5 @@
 (defun mp-update ()
-  ""
+  "Post without title"
   (interactive)
   (if (yes-or-no-p "Are you sure you want to post this?" )
       (request
@@ -9,7 +9,7 @@
        :headers `(("Authorization" . ,(format "Bearer %s" token)))
        :success (cl-function (lambda (&key data &allow-other-keys) (message "Success"))))))
 (defun mp-post()
-  ""
+  "Post with title"
   (interactive)
   (if (yes-or-no-p "Are you sure you want to post this?" )
       (request
@@ -19,7 +19,7 @@
        :headers `(("Authorization" . ,(format "Bearer %s" token)))
        :success (cl-function (lambda (&key data &allow-other-keys) (message "Success"))))))
 (defun mp-like()
-  ""
+  "Post a link as like-of"
   (interactive)
   (if (yes-or-no-p "Are you sure you want to post this?" )
       (request
@@ -29,7 +29,7 @@
        :headers `(("Authorization" . ,(format "Bearer %s" token)))
        :success (cl-function (lambda (&key data &allow-other-keys) (message "Success"))))))
 (defun mp-facepalm()
-  ""
+  "Post link as facepalm-of"
   (interactive)
   (if (yes-or-no-p "Are you sure you want to post this?" )
       (request
@@ -39,7 +39,7 @@
        :headers `(("Authorization" . ,(format "Bearer %s" token)))
        :success (cl-function (lambda (&key data &allow-other-keys) (message "Success"))))))
 (defun mp-reply ()
-  ""
+  "Post reply"
   (interactive)
   (if (yes-or-no-p "Are you sure you want to post this?" )
       (request
