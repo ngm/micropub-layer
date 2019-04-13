@@ -43,6 +43,17 @@
        :headers `(("Authorization" . ,(format "Bearer %s" token)))
        :success (cl-function (lambda (&key data &allow-other-keys) (message "Success"))))))
 
+(defun mp-bookmark()
+  "Post a link as bookmark-of"
+  (interactive)
+  (if (yes-or-no-p "Are you sure you want to post this?" )
+      (request
+       endpoint
+       :type "POST"
+       :data `(("h"."entry")("bookmark-of" . ,(read-string "Link: ")))
+       :headers `(("Authorization" . ,(format "Bearer %s" token)))
+       :success (cl-function (lambda (&key data &allow-other-keys) (message "Success"))))))
+
 (defun mp-reply ()
   "Post reply"
   (interactive)
