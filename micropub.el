@@ -1,4 +1,5 @@
 ;;; -*- lexical-binding: t; -*-
+(require 'map)
 
 (defun mp-note ()
   "Post without title"
