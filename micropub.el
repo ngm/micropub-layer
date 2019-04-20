@@ -71,7 +71,7 @@
 
 ;; TODO: Would like to do this without the request being synchronous,
 ;; but I'm not sure how to access buffer-file-name in the success callback.
-(defun refresh-syndication-targets ()
+(defun mp-refresh-syndication-targets ()
   "Query micropub endpoint for syndication targets and save to config"
   (interactive)
   (let*
