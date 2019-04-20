@@ -93,7 +93,6 @@
 
 (defun choose-syndication-targets ()
   "Prompt user to pick a syndication targets from a list."
-  (interactive)
   (let ((targets (load-syndication-targets)))
     (completing-read-multiple "Syndicate to (separate targets with commas): " targets)))
 
